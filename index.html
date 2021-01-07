@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+</body>
+<script>
+    // Personas
+    function Persona (nombre,apellido){
+       this.nombre = nombre;
+       this.apellido = apellido;
+    }
+
+    Persona.prototype.getFullName = function(nombre,apellido){
+        console.log(`el nombre es:${nombre} y el apellido: ${apellido}  `)
+    }
+    
+    var juan = new Persona()
+    juan.getFullName('juan','porras');
+    
+    // Mascotas
+
+    function Mascota (nombre){
+       this.nombre = nombre;
+    }
+    var mascotasArray = ['perro','gato'];
+    var mascotas = new Mascota()
+    Mascota.prototype.addMascota = function(mascotas){
+        var nuevaMascota = [...mascotas,'bull terrier'];
+        console.log(nuevaMascota);
+        console.log(nuevaMascota.length);
+    }
+    mascotas.addMascota(mascotasArray);
+
+</script>
+</html>
